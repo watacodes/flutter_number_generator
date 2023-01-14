@@ -1,4 +1,4 @@
-# flutter_test_3
+# Flutter/Dart Random Number Generator
 
 This is a Flutter/Dart application which generates a random integer between two numbers given by the users.
 
