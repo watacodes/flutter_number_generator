@@ -1,6 +1,6 @@
 # flutter_test_3
 
-A new Flutter project.
+This is a Flutter/Dart application which generates a random integer between two numbers given by the users.
 
 ## Getting Started
 
