@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
 import './range_selector_page.dart';
 import './randomizer_page.dart';
+import './randomizer_change_notifier.dart';
 
 void main() {
   runApp(AppWidget());
@@ -9,12 +12,15 @@ void main() {
 class AppWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Random Number Generator',
-      theme: ThemeData(
-        primarySwatch: Colors.green,
+    return ChangeNotifierProvider(
+      create: (context) => RandomizerChangeNotifier(),
+      child: MaterialApp(
+        title: 'Random Number Generator',
+        theme: ThemeData(
+          primarySwatch: Colors.green,
+        ),
+        home: RangeSelectorPage(),
       ),
-      home: RangeSelectorPage(),
     );
   }
 }
